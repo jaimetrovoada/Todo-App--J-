@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 2fr auto;
+  background: #355c7d;
+  background: -webkit-linear-gradient(to bottom, #c06c84, #6c5b7b, #355c7d);
+  background: linear-gradient(to bottom, #c06c84, #6c5b7b, #355c7d);
+}
+
+header {
+  padding: 10px 50px;
+}
+
+header > h1 {
+  font-size: 2em;
+}
+
+.container {
+  margin: 15% auto;
+  display: grid;
+  grid-template-rows: auto;
+  align-content: start;
+  gap: 30px;
+}
+
+#addForm {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15px;
+}
+
+#addForm > input {
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+}
+.addInput {
+}
+
+.addInput::placeholder {
+  color: dimgrey;
+}
+
+.addInput:focus::placeholder {
+  opacity: 0;
+}
+
+.addButton {
+  color: #ffffff;
+  background-color: coral;
+  cursor: pointer;
+}
+
+.listContainer {
+  display: grid;
+  gap: 15px;
+}
+
+.listContainer li {
+  list-style: none;
+}
+
+#itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#itemList > li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+#itemList span {
+  font-size: 1.5em;
+}
+
+#itemList img {
+  width: 16px;
+  height: 16px;
+}
+
+.showDelete {
+  color: #ffffff;
+  background-color: red;
+  padding: 5px 15px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  width: fit-content;
+  justify-self: end;
+  cursor: pointer;
+}
+.showDelete:hover {
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+@media (min-width: 1024px) {
+}
