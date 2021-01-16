@@ -54,8 +54,11 @@
       toDoInput.value = "";
       document.querySelector(".msg").textContent = "";
     } else {
-      const msg = "emm... PLease write something";
+      const msg = "Emm... Please write something";
       document.querySelector(".msg").textContent = msg;
+      setTimeout(() => {
+        document.querySelector(".msg").textContent = "";
+      }, 3000);
     }
   }
 
@@ -89,7 +92,7 @@
     })();
     delBtnDiv.className = giveClass;
 
-    delBtnImg.src = "./images/delete.svg";
+    delBtnImg.src = "./images/close-1214342.png";
     delBtnDiv.appendChild(delBtnImg);
 
     newItemEl.appendChild(txtSpan);

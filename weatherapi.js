@@ -12,8 +12,14 @@ function success(position) {
   xhr.open("GET", url, true);
   xhr.onload = () => {
     let responseObj = JSON.parse(xhr.response);
-    let weather = responseObj.weather[0].main;
-    document.getElementById("weather").innerHTML = `weather: ${weather}`;
+    const condition = responseObj.weather[0].main;
+    const countryCode = responseObj.sys.country;
+    document.getElementsByClassName(
+      "condition"
+    )[0].innerHTML = `Weather: ${condition}`;
+    document.getElementsByClassName(
+      "countryCode"
+    )[0].innerHTML = `Country Code: ${countryCode}`;
   };
 
   xhr.send();
