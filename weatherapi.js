@@ -5,7 +5,7 @@ navigator.geolocation.getCurrentPosition(success, fail);
 function success(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
-  const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat.toFixed(
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat.toFixed(
     2
   )}&lon=${lon.toFixed(2)}&appid=${apiKey}`;
   let xhr = new XMLHttpRequest();
