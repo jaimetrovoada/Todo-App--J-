@@ -1,19 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 400;
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
 }
+
 body {
   min-height: 100%;
   display: grid;
-  grid-template-rows: 1fr 2fr auto;
-  background: #355c7d;
-  background: -webkit-linear-gradient(to bottom, #c06c84, #6c5b7b, #355c7d);
-  background: linear-gradient(to bottom, #c06c84, #6c5b7b, #355c7d);
+  grid-template-rows: 1fr auto;
+  background: #232946;
+  /* background: -webkit-linear-gradient(to bottom, #c06c84, #6c5b7b, #355c7d);
+  background: linear-gradient(to bottom, #c06c84, #6c5b7b, #355c7d); */
 }
 
 header {
@@ -22,6 +27,7 @@ header {
 
 header > h1 {
   font-size: 2em;
+  color: #fffffe;
 }
 
 .container {
@@ -30,6 +36,7 @@ header > h1 {
   grid-template-rows: auto;
   align-content: start;
   gap: 30px;
+  width: 95%;
 }
 
 #addForm {
@@ -41,8 +48,8 @@ header > h1 {
 #addForm > input {
   padding: 10px;
   border-radius: 15px;
+  border: 1px solid #121629;
   outline: none;
-  border: none;
 }
 .addInput {
 }
@@ -56,33 +63,43 @@ header > h1 {
 }
 
 .addButton {
-  color: #ffffff;
-  background-color: coral;
+  color: #232946;
+  background-color: #ff8906;
   cursor: pointer;
 }
 
 .listContainer {
   display: grid;
-  gap: 15px;
-}
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
 
-.listContainer li {
-  list-style: none;
+  gap: 25px;
 }
 
 #itemList {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 #itemList > li {
+  list-style: none;
   display: grid;
+  gap: 10px;
   grid-template-columns: 1fr auto;
+  border: 3px #121629 solid;
+  padding: 15px;
+  color: #232946;
+  background-color: #d4d8f0;
+  border-radius: 15px;
 }
 
 #itemList span {
   font-size: 1.5em;
+}
+
+#itemList > li > div {
+  align-self: center;
 }
 
 #itemList img {
@@ -92,7 +109,7 @@ header > h1 {
 
 .showDelete {
   color: #ffffff;
-  background-color: red;
+  background-color: #e53170;
   padding: 5px 15px;
   border-radius: 15px;
   outline: none;

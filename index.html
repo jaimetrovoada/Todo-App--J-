@@ -13,24 +13,26 @@
     <header>
         <h1>To-Do App</h1>
     </header>
-    <!-- <div class="container">
+    <!--  <div class="container">
         <div id="hour"></div>
         <div id="weather"></div>
     </div> -->
     <div class="container">
         <div class="formContainer">
-            <form action="" id="addForm">
-                <input type="text" placeholder="Write new item" name="newItemInput" class="addInput">
+            <form action="" id="addForm" autocomplete="off">
+                <input type="text" placeholder="Write new item" name="newItemInput" class="addInput" autocomplete="off">
                 <input type="submit" value="Add" class="addButton">
             </form>
             <div class="msg"></div>
         </div> <!-- end of form container -->
+
         <div class="listContainer">
             <ul id="itemList"></ul>
             <div class="showDelete off">Delete</div>
         </div> <!-- end of list container -->
     </div> <!-- end of main container -->
-    <script src="./script.js"></script>
+    <script src="./main.js"></script>
+    <!-- <script src="./weatherapi.js"></script> -->
 </body>
 
 </html>
