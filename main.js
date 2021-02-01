@@ -4,11 +4,18 @@
   const deleteButton = document.querySelector(".showDelete");
 
   //display hour
-  /*   const date = new Date();
+  const date = new Date();
   const hour = date.getHours();
   const minute = date.getMinutes();
   const hourContainer = document.getElementById("hour");
-  hourContainer.innerHTML = `${hour}:${minute}`; */
+  const timezone = () => {
+    if (date.getTimezoneOffset() < 0) {
+      return `+${date.getTimezoneOffset() / -60}`;
+    } else if (date.getTimezoneOffset() > 0) {
+      return `${date.getTimezoneOffset() / -60}`;
+    }
+  };
+  hourContainer.innerHTML = `${hour}:${minute} (UTC ${timezone()})`;
 
   //Event Listeners
   deleteButton.addEventListener("click", (e) => {

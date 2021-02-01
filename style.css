@@ -6,6 +6,7 @@
   font-size: 16px;
   font-family: "Oxygen", sans-serif;
   font-weight: 400;
+  box-sizing: border-box;
 }
 
 html {
@@ -17,8 +18,6 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   background: #232946;
-  /* background: -webkit-linear-gradient(to bottom, #c06c84, #6c5b7b, #355c7d);
-  background: linear-gradient(to bottom, #c06c84, #6c5b7b, #355c7d); */
 }
 
 header {
@@ -34,9 +33,10 @@ header h1 {
   color: #fffffe;
 }
 
-#weather {
+#hour {
   text-align: right;
   color: #eebbc3;
+  font-size: 2em;
 }
 
 .container {
@@ -76,6 +76,8 @@ header h1 {
   background-color: #ff8906;
   cursor: pointer;
 }
+.addButton:hover {
+}
 
 .msg {
   color: #eebbc3;
@@ -86,7 +88,6 @@ header h1 {
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
-
   gap: 25px;
 }
 
@@ -144,4 +145,27 @@ header h1 {
 }
 
 @media (min-width: 1024px) {
+  .container {
+    margin: 5% auto;
+  }
+  #itemList {
+    flex-flow: row wrap;
+  }
+
+  #itemList > li {
+    flex-basis: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin: 5% auto;
+  }
+  #itemList {
+    flex-flow: row wrap;
+  }
+
+  #itemList > li {
+    flex-basis: 30%;
+  }
 }
