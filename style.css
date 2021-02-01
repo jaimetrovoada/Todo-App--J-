@@ -18,10 +18,11 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   background: #232946;
+  padding: 20px;
 }
 
 header {
-  padding: 15px 5%;
+  /* padding: 15px 2.5%; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -40,7 +41,7 @@ header h1 {
 }
 
 .container {
-  margin: 15% auto;
+  margin: 5% auto;
   display: grid;
   grid-template-rows: auto;
   align-content: start;
@@ -60,8 +61,6 @@ header h1 {
   border: 1px solid #121629;
   outline: none;
 }
-.addInput {
-}
 
 .addInput::placeholder {
   color: dimgrey;
@@ -75,8 +74,10 @@ header h1 {
   color: #232946;
   background-color: #ff8906;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .addButton:hover {
+  background-color: #c06803;
 }
 
 .msg {
@@ -117,11 +118,6 @@ header h1 {
   align-self: start;
 }
 
-/* #itemList img {
-  width: 16px;
-  height: 16px;
-} */
-
 .showDelete {
   color: #ffffff;
   background-color: #e53170;
@@ -132,8 +128,10 @@ header h1 {
   width: fit-content;
   justify-self: end;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .showDelete:hover {
+  background-color: #c01551;
 }
 
 .hide {
